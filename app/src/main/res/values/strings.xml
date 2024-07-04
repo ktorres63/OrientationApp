@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">OrientationApp</string>
+    <string name="title_activity_triangle">TriangleACtivity</string>
+</resources>
