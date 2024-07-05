@@ -26,6 +26,15 @@ class SensorService : Service(), SensorEventListener {
     val rotationAngle: StateFlow<Float> get() = _rotationAngle
 
 
+//    override fun onCreate() {
+//        super.onCreate()
+//        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+//        sensorManager.registerListener(
+//            this,
+//            sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+//            SensorManager.SENSOR_DELAY_NORMAL
+//        )
+//    }
     override fun onCreate() {
         super.onCreate()
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
@@ -35,6 +44,7 @@ class SensorService : Service(), SensorEventListener {
             SensorManager.SENSOR_DELAY_NORMAL
         )
     }
+
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         return START_STICKY
